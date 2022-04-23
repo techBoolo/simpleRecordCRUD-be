@@ -40,3 +40,12 @@ export const updateRecord = async (id, data) => {
   }
 }
 
+export const deleteRecord = async (id) => {
+  const Record = getDB().collection('records')
+  try {
+    const result = await Record.deleteOne({ _id: ObjectId(id)})   
+    return result
+  } catch (error) {
+    throw error
+  }
+}

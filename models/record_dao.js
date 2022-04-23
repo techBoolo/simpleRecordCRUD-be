@@ -31,3 +31,11 @@ export const updateRecord = async (id, data) => {
     throw error
   }
 }
+
+export const deleteRecord = async (id) => {
+  try {
+    return await Record.deleteRecord(id) 
+  } catch (error) {
+    throw error
+  }
+}

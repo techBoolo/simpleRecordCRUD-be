@@ -40,3 +40,12 @@ export const update = async (req, res, next) => {
     throw error
   }
 }
+export const destroy = async (req, res, next) => {
+  const { id } = req.params
+  try {
+    const result = await Record.deleteRecord(id)
+    res.status(200).json(result)
+  } catch (error) {
+    throw error
+  }
+}
