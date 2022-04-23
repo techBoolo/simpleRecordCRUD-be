@@ -2,8 +2,8 @@ import { MongoClient } from 'mongodb'
 import dotenv from 'dotenv'
 dotenv.config()
 
-const url = process.env.MONGODB_URI
-const dbName = process.env.DB_NAME
+const url = process.env.MONGODB_URI_CLOUD
+const dbName = process.env.DB_NAME_CLOUD
 
 let db
 const mongoClient = new MongoClient(url)
